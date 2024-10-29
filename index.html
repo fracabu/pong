@@ -7,22 +7,34 @@
     <link rel="stylesheet" href="style.css">
     <title>Pong JS</title>
 </head>
-<body>
-    <div class="container-title">
-        <h1>pong</h1>
-    </div>
+<body class="light">
+    <header>
+        <div class="container-title">
+            <h1 class="game-title">Pong Game</h1>
+        </div>
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="themeSwitcher">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
     
-    <div id = "gameContainer">
-        <canvas id="gameBoard" width="500" height="500"></canvas>
-        <div id="scoreText">0 : 0</div>
-        <button id="resetBtn">Reset</button>
-
-    </div>
+    <main class="game-container">
+        <canvas class="game-board" width="500" height="500"></canvas>
+        <div class="score-text">0 : 0</div>
+        <button class="reset-btn">Reset</button>
+    </main>
     
+    <div class="controls left-controls">
+        <div class="touch-zone left-up"></div>
+        <div class="touch-zone left-down"></div>
+    </div>
+    <div class="controls right-controls">
+        <div class="touch-zone right-up"></div>
+        <div class="touch-zone right-down"></div>
+    </div>
 
-
-
-   
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,32 +1,216 @@
-.container-title{
+/* Variabili di Tema */
+:root {
+    --bg-color-light: #f0f0f0;
+    --text-color-light: #000000;
+    --bg-color-dark: #000000;
+    --text-color-dark: #ffffff;
+    --accent-color: #ff6b6b;
+    --button-color-light: #ff6b6b;
+    --button-color-dark: #444;
+    --pattern-color-light: rgba(0, 0, 0, 0.15); /* Aumentato il contrasto del pattern per la modalità chiara */
+    --pattern-color-dark: rgba(255, 255, 255, 0.15); /* Aumentato il contrasto del pattern per la modalità scura */
+  }
+  
+  body.light {
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--text-color-light);
+    --button-bg: var(--button-color-light);
+    --pattern-color: var(--pattern-color-light);
+  }
+  
+  body.dark {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --button-bg: var(--button-color-dark);
+    --pattern-color: var(--pattern-color-dark);
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Consolas", monospace;
+    transition: background-color 0.3s, color 0.3s;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><rect width="20" height="20" fill="%23FFFFFF" opacity="0.15"/><rect x="20" y="20" width="20" height="20" fill="%23FFFFFF" opacity="0.15"/></svg>');
+    background-size: 80px 80px;
+  }
+  
+  header {
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+  }
+  
+  .container-title {
     display: flex;
     justify-content: center;
-    font-family: "consolas", monospace;
+    align-items: center;
+    font-family: "Press Start 2P", cursive;
     text-transform: uppercase;
     font-size: 20px;
-    font-weight:bolder;
-   
-
+    font-weight: bolder;
+    gap: 20px;
+  }
+  
+  .game-title {
+    font-family: "Courier New", Courier, monospace; /* Font simile al classico Pong */
+    font-size: 28px; /* Dimensione testo ispirata ai titoli dei vecchi giochi */
+    color: #ffffff; /* Colore bianco per ricordare il contrasto sugli schermi a tubo catodico */
+    text-shadow: 
+      2px 2px 0 #000000, /* Effetto di ombra netta per simulare i bordi sfocati degli schermi */
+      4px 4px 0 #000000; 
+    background-color: #000000; /* Background nero per simulare uno schermo */
+    padding: 10px 20px; /* Spazio attorno al testo */
+    border: 2px solid #ffffff; /* Bordo bianco per richiamare il layout dei giochi arcade */
+    display: inline-block; /* Mantiene l'effetto di pulsante */
+    transition: color 0.3s, text-shadow 0.3s;
+  }
+  
+  .game-title:hover {
+    color: #00ff00; /* Colore verde brillante in stile retro al passaggio del mouse */
+    text-shadow: 
+      2px 2px 0 #000000, 
+      4px 4px 0 #000000; 
+  }
+  
+  
+  
+  
+  .theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--accent-color);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .game-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: var(--bg-color);
+    transition: box-shadow 0.3s;
+  }
+  
+  .game-board {
+  border: 3px solid var(--text-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #000000; /* Nero per il campo di gioco */
+  background-image: none; /* Rimuovere il pattern dal campo di gioco */
 }
 
-#gameContainer{
-   text-align:center;
-}
-
-#gameBoard{
-    border: 3px solid;
-}
-
-#scoreText{
-    font-family: "consolas", monospace;
+  
+  .score-text {
+    font-family: "Consolas", monospace;
     font-size: 100px;
-}
-#resetBtn{
-    font-family: "Permanent Marker", cursive;
-    font-size: 22px;
-    width:100px ;
+    margin: 20px 0;
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .reset-btn {
+    font-family: "Consolas", monospace;
+    font-size: 28px;
+    width: 120px;
     height: 50px;
-    border: 4px solid;
+    border: 1px solid var(--text-color);
     border-radius: 15px;
     cursor: pointer;
-}
+    background: var(--button-bg);
+    color: var(--text-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+  }
+  
+  .reset-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .reset-btn:active {
+    transform: translateY(1px);
+  }
+  
+  .controls {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .left-controls {
+    left: 5%;
+  }
+  
+  .right-controls {
+    right: 5%;
+  }
+  
+  .touch-zone {
+    width: 50px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2); /* Maggiore visibilità in modalità scura */
+    border: 2px solid var(--text-color); /* Bordi più definiti */
+    border-radius: 10px;
+    transition: background 0.2s;
+  }
+  
+  body.light .touch-zone {
+    background: rgba(0, 0, 0, 0.1); /* Maggiore visibilità in modalità chiara */
+  }
+  
+  .touch-zone:active {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
