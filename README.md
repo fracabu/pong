@@ -1,7 +1,6 @@
 # Atari Pong Clone 🎮
 
 
-
 ## Descrizione 📜
 
 Questo progetto è una versione ricreata del classico gioco **Pong** lanciato da Atari nel lontano 1972. Ho utilizzato **HTML, CSS e JavaScript** per sviluppare una replica semplice e divertente del leggendario gioco arcade. L'obiettivo principale di questo progetto era migliorare le mie abilità con queste tecnologie e cimentarmi nella logica di un videogioco interattivo.
@@ -30,6 +29,25 @@ Questo progetto è una versione ricreata del classico gioco **Pong** lanciato da
 
 - **Giocatore 1** (Paddle sinistro): `W` per muovere verso l'alto, `S` per muovere verso il basso.
 - **Giocatore 2** (Paddle destro): frecce `↑` e `↓` per muoversi su e giù.
+
+## Miniguida per clonare la repository 📂
+
+Se desideri avere una copia di questo progetto sul tuo computer, segui questi passaggi:
+
+1. **Installa Git**: Se non hai già Git installato, puoi scaricarlo e installarlo da [git-scm.com](https://git-scm.com/).
+2. **Copia l'URL della repository**: Vai alla pagina del progetto su GitHub e clicca sul pulsante verde **"Code"**. Copia l'URL HTTPS fornito, ad esempio: `https://github.com/tuo-utente-github/pong-game.git`.
+3. **Apri il terminale**:
+   - **Windows**: Usa **Git Bash**.
+   - **macOS e Linux**: Usa il terminale di sistema.
+4. **Clona la repository** eseguendo questo comando nel terminale:
+   ```bash
+   git clone https://github.com/tuo-utente-github/pong-game.git
+   ```
+5. **Entra nella cartella del progetto**:
+   ```bash
+   cd pong-game
+   ```
+6. **Apri il file `index.html`** nel tuo browser preferito per iniziare a giocare.
 
 ## Tecnologie utilizzate 💻
 
