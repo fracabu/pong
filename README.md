@@ -18,7 +18,7 @@ Questo progetto è una versione ricreata del classico gioco **Pong** lanciato da
 
 ## Demo 🕹️
 
-### [Prova il gioco qui][([link-alla-demo]
+### [Prova il gioco qui][[([link-alla-demo]](https://fracabu.github.io/pong/)
 
 ## Istruzioni per l'uso 🛠️
 
