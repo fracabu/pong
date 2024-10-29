@@ -1,6 +1,7 @@
 # Atari Pong Clone 🎮
 
-![image](https://github.com/user-attachments/assets/6171b510-7e79-496a-8f1a-cc7b52c60c3d)
+![image](https://github.com/user-attachments/assets/db3e252a-f916-4dd6-9bb3-8e9742999f54)
+
 
 
 ## Descrizione 📜
@@ -17,7 +18,7 @@ Questo progetto è una versione ricreata del classico gioco **Pong** lanciato da
 
 ## Demo 🕹️
 
-### [Prova il gioco qui](link-alla-demo) <!-- Aggiungi un link se hai una demo online -->
+### [Prova il gioco qui][[([link-alla-demo]](https://fracabu.github.io/pong/)
 
 ## Istruzioni per l'uso 🛠️
 
