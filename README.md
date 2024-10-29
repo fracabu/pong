@@ -1,6 +1,7 @@
 # Atari Pong Clone 🎮
 
-![image](https://github.com/user-attachments/assets/6171b510-7e79-496a-8f1a-cc7b52c60c3d)
+![image](https://github.com/user-attachments/assets/db3e252a-f916-4dd6-9bb3-8e9742999f54)
+
 
 
 ## Descrizione 📜
