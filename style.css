@@ -72,9 +72,6 @@
       4px 4px 0 #000000; 
   }
   
-  
-  
-  
   .theme-toggle {
     position: absolute;
     top: 20px;
@@ -143,12 +140,11 @@
   }
   
   .game-board {
-  border: 3px solid var(--text-color);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  background-color: #000000; /* Nero per il campo di gioco */
-  background-image: none; /* Rimuovere il pattern dal campo di gioco */
-}
-
+    border: 3px solid var(--text-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #000000; /* Nero per il campo di gioco */
+    background-image: none; /* Rimuovere il pattern dal campo di gioco */
+  }
   
   .score-text {
     font-family: "Consolas", monospace;
@@ -212,5 +208,50 @@
   
   .touch-zone:active {
     background: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Media Queries per la Responsività */
+  @media (max-width: 768px) {
+    .game-title {
+      font-size: 24px; /* Riduci la dimensione del font per schermi tablet */
+      padding: 8px 16px; /* Riduci il padding per schermi più piccoli */
+    }
+  
+    .score-text {
+      font-size: 70px;
+    }
+  
+    .reset-btn {
+      width: 100px;
+      height: 40px;
+      font-size: 24px;
+    }
+  
+    .touch-zone {
+      width: 40px;
+      height: 80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .game-title {
+      font-size: 20px; /* Riduci ulteriormente la dimensione del font per schermi smartphone */
+      padding: 6px 12px; /* Riduci il padding per schermi piccoli */
+    }
+  
+    .score-text {
+      font-size: 50px;
+    }
+  
+    .reset-btn {
+      width: 80px;
+      height: 35px;
+      font-size: 20px;
+    }
+  
+    .touch-zone {
+      width: 30px;
+      height: 60px;
+    }
   }
   
