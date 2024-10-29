@@ -1,5 +1,7 @@
 # Atari Pong Clone 🎮
 
+![image](https://github.com/user-attachments/assets/6171b510-7e79-496a-8f1a-cc7b52c60c3d)
+
 
 ## Descrizione 📜
 
@@ -55,10 +57,6 @@ Se desideri avere una copia di questo progetto sul tuo computer, segui questi pa
 - **CSS3** per lo stile e la grafica.
 - **JavaScript** per la logica del gioco e l'interattività.
 
-## Screenshots 📸
-
-![Game Screenshot 1](path-to-screenshot1.png) <!-- Aggiungi uno screenshot del gioco -->
-![Game Screenshot 2](path-to-screenshot2.png) <!-- Aggiungi un altro screenshot del gioco -->
 
 ## Idee per miglioramenti futuri 📈
 
